@@ -14,7 +14,7 @@ void hello()
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	// 测试std map 排序问题
+	//  测试std::map排序问题
 	//	std::map<int, std::string> mapTest;
 	// 	mapTest[9] = "第1次写入";
 	// 	mapTest[23] = "第2次写入";
