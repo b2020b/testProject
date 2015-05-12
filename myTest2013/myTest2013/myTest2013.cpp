@@ -5,7 +5,12 @@
 #include <map>
 #include <iostream>
 #include <string>
+#include <boost/thread/thread.hpp>
 
+void hello()
+{
+	std::cout << "Hello world, I'm a thread!" << std::endl;
+}
 
 int _tmain(int argc, _TCHAR* argv[])
 {
@@ -29,38 +34,43 @@ int _tmain(int argc, _TCHAR* argv[])
 	// 		std::cout << iter->first << iter->second <<std::endl;
 	// 	}
 
-	struct myStruct
-	{
-		std::string name;
-		std::map<int, std::string> myMap;
-	};
+// 	struct myStruct
+// 	{
+// 		std::string name;
+// 		std::map<int, std::string> myMap;
+// 	};
+// 
+// 	myStruct myStruct1;
+// 	myStruct1.name = "myStruct1";
+// 	myStruct1.myMap[9] = "第1次写入";
+// 	myStruct1.myMap[23] = "第2次写入";
+// 	myStruct1.myMap[15] = "第3次写入";
+// 	myStruct1.myMap[10] = "第4次写入";
+// 	myStruct1.myMap[1] = "第5次写入";
+// 	myStruct1.myMap[6] = "第6次写入";
+// 	myStruct1.myMap[5] = "第7次写入";
+// 	myStruct1.myMap[18] = "第8次写入";
+// 	myStruct1.myMap[11] = "第9次写入";
+// 	myStruct1.myMap[12] = "第10次写入";
+// 	myStruct1.myMap[4] = "第11次写入";
+// 	myStruct1.myMap[3] = "第12次写入";
+// 
+// 	myStruct myStruct2 = myStruct1;
+// 	myStruct2.name = "myStruct2";
+// 
+// 	std::map<int, std::string>::reverse_iterator iter = myStruct1.myMap.rbegin();
+// 	for (; iter != myStruct1.myMap.rend(); ++iter)
+// 	{
+// 		std::cout << iter->first << iter->second << std::endl;
+// 	}
+// 
+// 	char wait;
+// 	std::cin >> wait;
+// 	return 0;
 
-	myStruct myStruct1;
-	myStruct1.name = "myStruct1";
-	myStruct1.myMap[9] = "第1次写入";
-	myStruct1.myMap[23] = "第2次写入";
-	myStruct1.myMap[15] = "第3次写入";
-	myStruct1.myMap[10] = "第4次写入";
-	myStruct1.myMap[1] = "第5次写入";
-	myStruct1.myMap[6] = "第6次写入";
-	myStruct1.myMap[5] = "第7次写入";
-	myStruct1.myMap[18] = "第8次写入";
-	myStruct1.myMap[11] = "第9次写入";
-	myStruct1.myMap[12] = "第10次写入";
-	myStruct1.myMap[4] = "第11次写入";
-	myStruct1.myMap[3] = "第12次写入";
-
-	myStruct myStruct2 = myStruct1;
-	myStruct2.name = "myStruct2";
-
-	std::map<int, std::string>::reverse_iterator iter = myStruct1.myMap.rbegin();
-	for (; iter != myStruct1.myMap.rend(); ++iter)
-	{
-		std::cout << iter->first << iter->second << std::endl;
-	}
-
-	char wait;
-	std::cin >> wait;
+	//测试BOOST线程
+	boost::thread thrd(&hello);
+	thrd.join();
 	return 0;
 }
 
