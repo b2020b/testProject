@@ -114,7 +114,6 @@ int _tmain(int argc, _TCHAR* argv[])
 // 	CTestLog4cpp testLog4cpp;
 // 	testLog4cpp.doTest();
 
-
 	testMultiMapOrder();
 	char wait;
 	std::cin >> wait;
