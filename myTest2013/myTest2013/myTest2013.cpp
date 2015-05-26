@@ -74,7 +74,7 @@ void testMapOrder()
 	}*/
 }
 
-void testMMapOrder()
+void testMultiMapOrder()
 {
 	std::multimap<int, std::string> mapTest;
 // 	mapTest.insert(std::pair<int, std::string>(9, "µÚ1´ÎĞ´Èë"));
@@ -114,7 +114,8 @@ int _tmain(int argc, _TCHAR* argv[])
 // 	CTestLog4cpp testLog4cpp;
 // 	testLog4cpp.doTest();
 
-	testMMapOrder();
+
+	testMultiMapOrder();
 	char wait;
 	std::cin >> wait;
  	return 0;
