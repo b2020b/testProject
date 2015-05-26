@@ -74,12 +74,49 @@ void testMapOrder()
 	}*/
 }
 
+void testMMapOrder()
+{
+	std::multimap<int, std::string> mapTest;
+// 	mapTest.insert(std::pair<int, std::string>(9, "第1次写入"));
+// 	mapTest.insert(std::pair<int, std::string>(23, "第2次写入"));
+// 	mapTest.insert(std::pair<int, std::string>(9, "第3次写入"));
+// 	mapTest.insert(std::pair<int, std::string>(15, "第4次写入"));
+// 	mapTest.insert(std::pair<int, std::string>(10, "第5次写入"));
+// 	mapTest.insert(std::pair<int, std::string>(5, "第6次写入"));
+// 	mapTest.insert(std::pair<int, std::string>(11, "第7次写入"));
+// 	mapTest.insert(std::pair<int, std::string>(3, "第8次写入"));
+// 	mapTest.insert(std::pair<int, std::string>(5, "第9次写入"));
+// 	mapTest.insert(std::pair<int, std::string>(6, "第10次写入"));
+// 	mapTest.insert(std::pair<int, std::string>(10, "第11次写入"));
+// 	mapTest.insert(std::pair<int, std::string>(15, "第12次写入"));
+
+	mapTest.insert(std::pair<int, std::string>(9, "第1次写入"));
+	mapTest.insert(std::pair<int, std::string>(23, "第2次写入"));
+	mapTest.insert(std::pair<int, std::string>(9, "第3次写入"));
+	mapTest.insert(std::pair<int, std::string>(15, "第4次写入"));
+	mapTest.insert(std::pair<int, std::string>(10, "第5次写入"));
+	mapTest.insert(std::pair<int, std::string>(5, "第6次写入"));
+	mapTest.insert(std::pair<int, std::string>(11, "第7次写入"));
+	mapTest.insert(std::pair<int, std::string>(3, "第8次写入"));
+	mapTest.insert(std::pair<int, std::string>(5, "第9次写入"));
+	mapTest.insert(std::pair<int, std::string>(6, "第10次写入"));
+	mapTest.insert(std::pair<int, std::string>(10, "第11次写入"));
+	mapTest.insert(std::pair<int, std::string>(15, "第12次写入"));
+	std::multimap<int, std::string>::iterator iter = mapTest.begin();
+	for (; iter != mapTest.end(); ++iter)
+	{
+		std::cout << iter->first << iter->second << std::endl;
+	}
+}
+
 int _tmain(int argc, _TCHAR* argv[])
 {
-	CTestLog4cpp testLog4cpp;
-	testLog4cpp.doTest();
- 	char wait;
- 	std::cin >> wait;
+// 	CTestLog4cpp testLog4cpp;
+// 	testLog4cpp.doTest();
+
+	testMMapOrder();
+	char wait;
+	std::cin >> wait;
  	return 0;
 }
 
