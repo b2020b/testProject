@@ -107,6 +107,12 @@ void testMultiMapOrder()
 	{
 		std::cout << iter->first << iter->second << std::endl;
 	}
+	std::cout << "·´Ğò" << std::endl;
+	std::multimap<int, std::string>::reverse_iterator riter = mapTest.rbegin();
+	for (; riter != mapTest.rend(); ++riter)
+	{
+		std::cout << riter->first << riter->second << std::endl;
+	}
 }
 
 int _tmain(int argc, _TCHAR* argv[])
