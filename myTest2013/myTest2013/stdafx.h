@@ -16,9 +16,7 @@
 #include <atlstr.h>
 
 // TODO:  在此处引用程序需要的其他头文件
-//#ifdef _DEBUG
-#include "vld.h"
-//#endif
+#include <vld.h>
 
 #pragma comment(lib, "log4cpp.lib") 
 
