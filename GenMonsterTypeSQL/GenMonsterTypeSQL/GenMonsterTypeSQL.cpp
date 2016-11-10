@@ -8,10 +8,12 @@
 #include <string>
 #include <vector>
 #include <set>
+#include "../include/version.h"
 
 using namespace std;
 int _tmain(int argc, _TCHAR* argv[])
 {
+	std::cout << "³ÌÐò°æ±¾£º" << VERSION_NUMBER << std::endl;
 	std::set<unsigned int> setID;
 	std::ifstream fin("majl_test.log", std::ios::in);
 	char linebuff[1024] = { 0 };

@@ -10,10 +10,10 @@ if [ $LOCALVER \> 1 ] ; then
     if git status | grep -q "modified:" ; then
         VER="${VER}M"
     fi
-    VER="$VER $(git rev-list HEAD -n 1 | cut -c 1-7)"
-    GIT_VERSION=r$VER
+    VER="$VER-$(git rev-list HEAD -n 1 | cut -c 1-7)"
+    GIT_VERSION=\"r$VER\"
 else
-    GIT_VERSION=
+    GIT_VERSION=\"\"
     VER="x"
 fi
 rm -f config.git-hash
