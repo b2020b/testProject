@@ -225,3 +225,5 @@ pip-log.txt
 obj/
 [Rr]elease*/
 [Tt]est[Rr]esult*
+*.vc.db
+*.vc.opendb
