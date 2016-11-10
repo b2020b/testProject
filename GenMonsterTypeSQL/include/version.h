@@ -1,3 +1,3 @@
 #pragma once
 
-#define VERSION_NUMBER 1.0.0
+#define VERSION_NUMBER r46M 4387eef
